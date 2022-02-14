@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+	<main>
+
+		<!-- New member form -->
+		<h2>Ajouter un(e) Argonaute</h2> 
+		{{ form(form) }}
+			<!-- Member list -->
+			<h2>Membres de l'équipage</h2>
+			<div class="row justify-content-center text-center">           
+			{% for crewMember in crewMembers %} 
+              <div class="col-sm-12 col-md-6 col-lg-4 ">{{ crewMember.name }}</div>
+            {% endfor %}			
+		</div>
+	</main>
+
+{% endblock %}
