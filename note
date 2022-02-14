@@ -1,0 +1,14 @@
+{% set crewMemberCount = 0 %}
+			{% for crewMember in crewMembers %} 
+                {{ crewMember.name }}
+				{% set crewMemberCount = crewMemberCount + 1 %}
+				{% if crewMemberCount == 3 %}
+					</br>
+					{% set crewMemberCount = 0 %}
+				{% endif %}
+
+
+			{% endfor %}
+
+
+            <div class="col-sm-12 col-md-6 col-lg-4 ">{{ crewMember.name }}</div>
